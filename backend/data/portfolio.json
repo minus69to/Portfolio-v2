@@ -1,0 +1,83 @@
+{
+  "personalInfo": {
+    "name": "Your Name Here",
+    "title": "Your Title Here",
+    "location": "Your City, Country",
+    "email": "your.email@gmail.com",
+    "profileImage": "/images/profile.jpg"
+  },
+  "about": {
+    "description": "Your description here. Replace with your actual background, current position, research interests, etc.",
+    "currentPosition": "Your current position",
+    "university": "Your University",
+    "advisors": [
+      {
+        "name": "Advisor 1",
+        "url": "advisor-website-url"
+      }
+    ],
+    "researchLab": {
+      "name": "Your Lab Name",
+      "url": "lab-url"
+    },
+    "interests": ["Interest 1", "Interest 2", "Interest 3"],
+    "personalInterests": "Your personal interests and hobbies"
+  },
+  "publications": [
+    {
+      "title": "Publication Title 1",
+      "authors": ["Author 1", "Author 2"],
+      "venue": "Conference/Journal Name",
+      "year": 2024,
+      "url": "paper-url"
+    }
+  ],
+  "research": [
+    {
+      "title": "Research Project 1",
+      "description": "Description of research project",
+      "technologies": ["Tech 1", "Tech 2"],
+      "duration": "Start Date - End Date"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Your Degree",
+      "institution": "Your University",
+      "location": "City, Country",
+      "duration": "Start Year - End Year",
+      "gpa": "Your GPA (optional)",
+      "relevant_coursework": ["Course 1", "Course 2"]
+    }
+  ],
+  "workExperience": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "location": "City, Country",
+      "duration": "Start Date - End Date",
+      "description": "Job description and responsibilities",
+      "technologies": ["Tech 1", "Tech 2"]
+    }
+  ],
+  "skills": {
+    "programming": ["JavaScript", "Python", "C++", "Java"],
+    "frameworks": ["React", "Express", "Node.js"],
+    "tools": ["Git", "Docker", "VS Code"],
+    "databases": ["MongoDB", "PostgreSQL"]
+  },
+  "awards": [
+    {
+      "title": "Award Name",
+      "organization": "Organization Name",
+      "year": 2024,
+      "description": "Award description"
+    }
+  ],
+  "socialLinks": {
+    "linkedin": "your-linkedin-url",
+    "github": "your-github-url",
+    "googleScholar": "your-google-scholar-url",
+    "resume": "/resume.pdf"
+  }
+}
