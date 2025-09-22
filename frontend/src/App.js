@@ -2,6 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import About from './components/About';
+import Publications from './components/Publications';
+import Education from './components/Education';
+import WorkExperience from './components/WorkExperience';
+import Skills from './components/Skills';
+import Research from './components/Research';
+import Awards from './components/Awards';
+import Resume from './components/Resume';
 import { portfolioAPI } from './services/api';
 import './App.css';
 
@@ -27,6 +34,31 @@ function App() {
     fetchData();
   }, []);
 
+  const renderActiveSection = () => {
+    if (!portfolioData) return <div>No data available</div>;
+
+    switch(activeSection) {
+      case 'about':
+        return <About aboutData={portfolioData.about} />;
+      case 'publications':
+        return <Publications publicationsData={portfolioData.publications} />;
+      case 'researchexperience':
+        return <Research researchData={portfolioData.research} />;
+      case 'education':
+        return <Education educationData={portfolioData.education} />;
+      case 'workexperience':
+        return <WorkExperience workData={portfolioData.workExperience} />;
+      case 'skills':
+        return <Skills skillsData={portfolioData.skills} />;
+      case 'awards':
+        return <Awards awardsData={portfolioData.awards} />;
+      case 'resume':
+        return <Resume socialLinks={portfolioData.socialLinks} />;
+      default:
+        return <About aboutData={portfolioData.about} />;
+    }
+  };
+
   if (loading) return <div className="loading">Loading...</div>;
   if (error) return <div className="error">{error}</div>;
   if (!portfolioData) return <div className="error">No data available</div>;
@@ -39,8 +71,7 @@ function App() {
       />
       <div className="main-content">
         <Header personalInfo={portfolioData.personalInfo} />
-        {activeSection === 'about' && <About aboutData={portfolioData.about} />}
-        {/* We'll add other sections later */}
+        {renderActiveSection()}
       </div>
     </div>
   );
